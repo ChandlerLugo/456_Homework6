@@ -45,19 +45,32 @@ tr:nth-child(even) {
 
 <script src="myData.js"></script>
 
-<script src="myData.js"> 
+<script> 
   var x = document.getElementById('myTable')
   
   for(var i =0; i<myData.features.length; i++){
     var myNewRow = document.createElement('tr')
     var myNewCell1 = document.createElement('td')
-    // var myNewCell2 = document.createElement('td');
-    
-    myNewCell1.innerText = myData.features[i].properties.JURISDICT_LABEL_NM;
-    // myNewCell2.innerText = myData.objects[i].features.properties()
+    var county = myData.features[i].properties.JURISDICT_LABEL_NM;
+    myNewCell1.innerText = county
     myNewRow.append(myNewCell1)
-    // myNewRow.append(myNewCell2)
     x.append(myNewRow)
+
+    var myNewRow2 = document.createElement('tr')
+    var myNewCell2 = document.createElement('td')
+    var value1900 = myData.features[i].properties.WACensusPopulationData_PopulationDensity1900;
+    myNewCell2.innerText = value1900
+    myNewRow.append(myNewCell2)
+    x.append(myNewRow2)
+
+    var myNewRow3 = document.createElement('tr')
+    var myNewCell3 = document.createElement('td')
+    var value1910 = myData.features[i].properties.WACensusPopulationData_PopulationDensity1910;
+    myNewCell2.innerText = value1910
+    myNewRow.append(myNewCell3)
+    x.append(myNewRow3)
+
+
   }
 
 </script>
