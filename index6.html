@@ -55,26 +55,32 @@ tr:nth-child(even) {
     myNewCell1.innerText = county
     myNewRow.append(myNewCell1)
     x.append(myNewRow)
+   }
 
+  for (var i =0; i<myData.features.length; i++){
     var myNewRow2 = document.createElement('tr')
     var myNewCell2 = document.createElement('td')
     var value1900 = myData.features[i].properties.PopulationDensity1900;
     myNewCell2.innerText = value1900
-    myNewRow.append(myNewCell2)
+    myNewRow2.append(myNewCell2)
     x.append(myNewRow2)
+  }
 
+  for (var i =0; i<myData.features.length; i++){
     var myNewRow3 = document.createElement('tr')
     var myNewCell3 = document.createElement('td')
     var value1910 = myData.features[i].properties.PopulationDensity1910;
-    myNewCell2.innerText = value1910
-    myNewRow.append(myNewCell3)
+    myNewCell3.innerText = value1910
+    myNewRow3.append(myNewCell3)
     x.append(myNewRow3)
-
+  }
+  
+  for (var i =0; i<myData.features.length; i++){
     var myNewRow4 = document.createElement('tr')
     var myNewCell4 = document.createElement('td')
     var value1920 = myData.features[i].properties.PopulationDensity1920;
-    myNewCell2.innerText = value1920
-    myNewRow.append(myNewCell4)
+    myNewCell4.innerText = value1920
+    myNewRow4.append(myNewCell4)
     x.append(myNewRow4)
 
   }
