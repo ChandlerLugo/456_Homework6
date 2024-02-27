@@ -21,45 +21,46 @@ tr:nth-child(even) {
 </head>
 <body>
 
-<h2>HTML Table</h2>
 
-<table>
+<h2>Population Density in Washington</h2>
+
+<table id="myTable">
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
+    <th>County</th>
+    <th>1900</th>
+    <th>1910</th>
+    <th>1920</th>
+    <th>1930</th>
+    <th>1940</th>
+    <th>1950</th>
+    <th>1960</th>
+    <th>1970</th>
+    <th>1980</th>
+    <th>1990</th>
+    <th>2000</th>
+    <th>2010</th>
+    <th>2020</th>
   </tr>
 </table>
+
+<script src="myData.js"></script>
+
+<script src="myData.js"> 
+  var x = document.getElementById('myTable')
+  
+  for(var i =0; i<myData.features.length; i++){
+    var myNewRow = document.createElement('tr')
+    var myNewCell1 = document.createElement('td')
+    // var myNewCell2 = document.createElement('td');
+    
+    myNewCell1.innerText = myData.features[i].properties.JURISDICT_LABEL_NM;
+    // myNewCell2.innerText = myData.objects[i].features.properties()
+    myNewRow.append(myNewCell1)
+    // myNewRow.append(myNewCell2)
+    x.append(myNewRow)
+  }
+
+</script>
 
 </body>
 </html>
