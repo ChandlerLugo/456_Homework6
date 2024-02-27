@@ -70,6 +70,12 @@ tr:nth-child(even) {
     myNewRow.append(myNewCell3)
     x.append(myNewRow3)
 
+    var myNewRow4 = document.createElement('tr')
+    var myNewCell4 = document.createElement('td')
+    var value1920 = myData.features[i].properties.PopulationDensity1920;
+    myNewCell2.innerText = value1920
+    myNewRow.append(myNewCell4)
+    x.append(myNewRow4)
 
   }
 
