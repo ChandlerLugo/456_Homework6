@@ -15,14 +15,14 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #036a20;
 }
 </style>
 </head>
 <body>
 
 
-<h2>Population Density in Washington</h2>
+<h2>Population Density in Washington 1900 - 2020</h2>
 
 <table id="myTable">
   <tr>
@@ -64,6 +64,8 @@ tr:nth-child(even) {
     var myNewCell12 = document.createElement('td')
     var myNewCell13 = document.createElement('td')
     var myNewCell14 = document.createElement('td')
+
+
     myNewCell1.innerText = myData.features[i].properties.JURISDICT_LABEL_NM;
     myNewCell2.innerText = myData.features[i].properties.PopulationDensity1900;
     myNewCell3.innerText = myData.features[i].properties.PopulationDensity1910;
@@ -78,6 +80,8 @@ tr:nth-child(even) {
     myNewCell12.innerText = myData.features[i].properties.PopulationDensity2000;
     myNewCell13.innerText = myData.features[i].properties.PopulationDensity2010;
     myNewCell14.innerText = myData.features[i].properties.PopulationDensity2020;
+
+
     myNewRow.append(myNewCell1)
     myNewRow.append(myNewCell2)
     myNewRow.append(myNewCell3)
@@ -92,6 +96,7 @@ tr:nth-child(even) {
     myNewRow.append(myNewCell12)
     myNewRow.append(myNewCell13)
     myNewRow.append(myNewCell14)
+
     x.append(myNewRow)
 
 
